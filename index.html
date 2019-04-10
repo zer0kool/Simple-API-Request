@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--Created by Alex Loaiza-->
+<!--as a guide template for other techs at svc-->
+
+
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Custom CSS style-->
+    <link rel="stylesheet" href="./init.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+
+    <!--Navigation goes in header please-->
+    <header>
+        <nav class="blue-grey darken-4 z-depth-3">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Simple API Calling</a>
+                <form class="right hide-on-small-only" id="post-form">
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+
+    <!--Add main content here-->
+    <main>
+
+        <!--Importing API data to #root from javascript-->
+        <div id="root"></div>
+    </main>
+
+    <!--Footer goes inside footer-->
+    <footer class="page-footer z-depth-2 blue-grey darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m8 l6">
+                    <h5 class="white-text">Simple API Calling</h5>
+                    <p class="grey-text text-lighten-4">Build as a template guide for future API call requests.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Resources</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://api.github.com">Github API</a></li>
+                        <li><a class="grey-text text-lighten-3" href="https://materializecss.com/">Materialize CSS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright blue-grey darken-4">
+            <div class="container">
+                Build by Alejandro Loaiza
+            </div>
+        </div>
+    </footer>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--API script-->
+    <script src="api.js"></script>
+
+</body>
+
+</html>
