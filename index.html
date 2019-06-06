@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./init.css">
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple GitHub API</title>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
     <header>
         <nav class="blue-grey darken-4 z-depth-3">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Simple API Calling</a>
+                <a href="#!" class="brand-logo truncate">Simple API Calling</a>
                 <form class="right hide-on-small-only" id="post-form">
                     <div class="input-field">
                         <input id="search" type="search" required>
@@ -37,6 +38,16 @@
 
     <!--Add main content here-->
     <main>
+        <!-- Adding a search for small screens -->
+<!--
+        <form class="center show-on-medium-and-down" id="post-form">
+            <div class="input-field">
+                <input id="search" type="search" required>
+                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <i class="material-icons">close</i>
+            </div>
+        </form>
+-->
 
         <!--Importing API data to #root from javascript-->
         <div id="root"></div>
