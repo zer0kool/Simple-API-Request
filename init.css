@@ -21,6 +21,11 @@ main {
     flex: 1 0 auto;
 }
 
+nav {
+    position: fixed;
+    z-index: 20;
+}
+
 nav .nav-wrapper {
     position: relative;
     height: 100%;
@@ -31,6 +36,11 @@ nav .nav-wrapper {
 #root {
     max-width: 1200px;
     margin: 0 auto;
+    padding-top: 56px;
+}
+
+.hide {
+    display: none !important;
 }
 
 form {
@@ -123,6 +133,7 @@ p {
 h2 {
     width: -webkit-fill-available;
     padding: 0 10px;
+    margin-top: 30px;
 }
 
 .nav-wrapper .input-field input[type=search] {
@@ -131,4 +142,69 @@ h2 {
 
 nav .input-field label.active i {
     line-height: 58px;
+}
+
+
+/*blue button*/
+span.settings {
+    margin-top: 15px;
+    height: 20px;
+    width: auto;
+    background-color: #607D8B;
+    padding: 18px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+}
+
+.flex {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    align-self: flex-start;
+}
+
+div#control {
+    display: block;
+    margin-top: 20px;
+}
+
+div#info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: -webkit-fill-available;
+}
+
+h6.records {
+    margin-top: -64px;
+    padding-left: 10px;
+
+}
+
+img.alex {
+    width: -webkit-fill-available;
+    height: auto;
+    margin-top: -10px;
+}
+
+img.userAvatar {
+    border-radius: 50%;
+}
+
+.repo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*banner image*/
+.git img {
+    height: auto;
+    width: -webkit-fill-available;
+    position: absolute;
+    top: 50px;
 }
