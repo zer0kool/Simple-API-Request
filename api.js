@@ -149,7 +149,7 @@ var getData = function () {
 
                             //header.insertAdjacentHTML = '<span class="control"> button </span>';
                             $(`.${user} .userHeader`).append(`
-                               <div class="flex"> <span class="${user} settings"> remove </span>
+                               <div class="flex"> <span class="${user} settings waves-effect waves-light"> remove </span>
                                   <div id="control" class="switch">
                                     <label>
                                       show
@@ -160,14 +160,19 @@ var getData = function () {
                                   </div></div>
                                `);
 
+
                             // For each repo in collection do the following
                             data.forEach(repo => {
-                                // Log each repo title for testing
-                                console.log('...' + repo.name)
+                                // Log each repo title for testing               console.log('...' + repo.name)
 
                                 // Create a div with a card class
                                 const card = document.createElement('article');
                                 card.setAttribute('class', 'card');
+
+                                // construct url for the repository in anchor element
+                                const a = document.createElement('a');
+                                let repolink = repo.html_url;
+                                a.setAttribute('href', `${repolink}`)
 
                                 // Create an h1 and set the title content
                                 const h1 = document.createElement('h1');
@@ -186,11 +191,11 @@ var getData = function () {
 
                                 // Append the cards to the blobk element
                                 block.appendChild(card);
-
+                                card.setAttribute('scr', `${url}`)
+                                card.appendChild(a);
                                 // Each card will contain an h1 and a p
-                                card.appendChild(h1);
-                                card.appendChild(p);
-                                card.setAttribute('src', `${url}`);
+                                a.appendChild(h1);
+                                a.appendChild(p);
 
 
                             })
@@ -222,11 +227,9 @@ var getData = function () {
         }
         request.send();
 
-
     }
     // Scrolling the page to the element being build.
     //    let myfocus = $(`.${user}`);
     //    console.log(myfocus);
     //    myfocus.scrollIntoView(true);
-
 }

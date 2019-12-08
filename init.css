@@ -1,4 +1,5 @@
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -12,12 +13,19 @@ html {
 }
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-height: 100vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
 }
 
@@ -73,33 +81,44 @@ p {
 }
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .card {
     margin: 1rem;
     background: white;
+    -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
     box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
     border-radius: 12px;
     overflow: hidden;
+    -webkit-transition: all .2s linear;
     transition: all .2s linear;
     width: 100%;
 }
 
 .card:hover {
+    -webkit-box-shadow: 2px 8px 45px rgba(0, 0, 0, .25);
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .25);
+    -webkit-transform: translate3D(0, -2px, 0);
     transform: translate3D(0, -2px, 0);
 }
 
 @media screen and (min-width: 600px) {
     .card {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(50% - 2rem);
         flex: 1 1 calc(50% - 2rem);
     }
 }
 
 @media screen and (min-width: 900px) {
     .card {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(33% - 2rem);
         flex: 1 1 calc(33% - 2rem);
     }
 }
@@ -126,6 +145,8 @@ p {
 .userHeader {
     width: -webkit-fill-available;
     margin: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 20px;
 }
@@ -153,18 +174,32 @@ span.settings {
     background-color: #607D8B;
     padding: 18px;
     font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-radius: 5px;
     color: white;
 }
 
 .flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: none;
     flex: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 10px;
+    -ms-flex-item-align: start;
     align-self: flex-start;
 }
 
@@ -174,8 +209,13 @@ div#control {
 }
 
 div#info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: -webkit-fill-available;
 }
@@ -197,7 +237,10 @@ img.userAvatar {
 }
 
 .repo {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -207,4 +250,18 @@ img.userAvatar {
     width: -webkit-fill-available;
     position: absolute;
     top: 50px;
+}
+
+
+/*css for the plus btn on the articles cards*/
+.btn-floating.btn-large i {
+    line-height: 34px !important;
+}
+
+.btn-floating.btn-large {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.87) !important;
 }
